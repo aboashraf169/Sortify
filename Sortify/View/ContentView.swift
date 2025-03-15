@@ -89,7 +89,9 @@ struct ContentView: View {
       // MARK: - HEADER
       HeaderView(showGuideView: $showGuide, showInfoView: $showInfo)
         .opacity(dragState.isDragging ? 0.0 : 1.0)
-        .animation(.default)
+        .animation(.default, value: dragState.isDragging)
+
+//        .animation(.default)
       
       Spacer()
       
@@ -114,7 +116,7 @@ struct ContentView: View {
             .offset(x: self.isTopCard(cardView: cardView) ?  self.dragState.translation.width : 0, y: self.isTopCard(cardView: cardView) ?  self.dragState.translation.height : 0)
             .scaleEffect(self.dragState.isDragging && self.isTopCard(cardView: cardView) ? 0.85 : 1.0)
             .rotationEffect(Angle(degrees: self.isTopCard(cardView: cardView) ? Double(self.dragState.translation.width / 12) : 0))
-            .animation(.interpolatingSpring(stiffness: 120, damping: 120))
+            .animation(.interpolatingSpring(stiffness: 120, damping: 120), value: dragState.isPressing)
             .gesture(LongPressGesture(minimumDuration: 0.01)
               .sequenced(before: DragGesture())
               .updating(self.$dragState, body: { (value, state, transaction) in
@@ -160,13 +162,13 @@ struct ContentView: View {
       // MARK: - FOOTER
       FooterView(showBookingAlert: $showAlert)
         .opacity(dragState.isDragging ? 0.0 : 1.0)
-        .animation(.default)
+        .animation(.default,value: dragState.isDragging)
     }
     .alert(isPresented: $showAlert) {
       Alert(
         title: Text("SUCCESS"),
-        message: Text("Wishing a lovely and most precious of the times together for the amazing couple."),
-        dismissButton: .default(Text("Happy Honeymoon!")))
+        message: Text("Here more data is displayed that the user is experiencing."),
+        dismissButton: .default(Text("Sortify")))
     }
   }
 }
