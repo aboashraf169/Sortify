@@ -8,6 +8,18 @@ Excited to share my latest SwiftUI project, **Sortify** – a simple app that ma
 - **➡️ Swipe Right** → ❤️ Add to Favorites  
 - **⬅️ Swipe Left** → ❌ Remove from List  
 
+<p align="center">
+  <img src="https://github.com/aboashraf169/Sortify/blob/main/images/Screenshot%202025-03-17%20at%202.58.04%E2%80%AFPM.png" width="30%">
+  <img src="https://github.com/aboashraf169/Sortify/blob/main/images/Screenshot%202025-03-17%20at%202.58.11%E2%80%AFPM.png" width="30%">
+  <img src="https://github.com/aboashraf169/Sortify/blob/main/images/Screenshot%202025-03-17%20at%202.58.19%E2%80%AFPM.png" width="30%">
+</p>
+
+<p align="center">
+  <img src="https://github.com/aboashraf169/Sortify/blob/main/images/Screenshot%202025-03-17%20at%202.58.32%E2%80%AFPM.png" width="30%">
+  <img src="https://github.com/aboashraf169/Sortify/blob/main/images/Screenshot%202025-03-17%20at%202.58.36%E2%80%AFPM.png" width="30%">
+  <img src="https://github.com/aboashraf169/Sortify/blob/main/images/Screenshot%202025-03-17%20at%202.58.45%E2%80%AFPM.png" width="30%">
+</p>
+
 ---
 
 ## 🛠️ Technologies Used  
