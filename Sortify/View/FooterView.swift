@@ -12,9 +12,14 @@ struct FooterView: View {
   
   var body: some View {
     HStack {
-      Image(systemName: "xmark.circle")
-        .font(.system(size: 42, weight: .light))
-      
+        Button {
+            playSound(sound: "sound-click", type: "mp3")
+            self.haptics.notificationOccurred(.success)
+        } label: {
+            Image(systemName: "xmark.circle")
+              .font(.system(size: 42, weight: .light))
+        }
+
       Spacer()
       
       Button(action: {
@@ -35,9 +40,13 @@ struct FooterView: View {
       }
       
       Spacer()
-      
-      Image(systemName: "heart.circle")
-        .font(.system(size: 42, weight: .light))
+        Button {
+            playSound(sound: "sound-click", type: "mp3")
+            self.haptics.notificationOccurred(.success)
+        } label: {
+            Image(systemName: "heart.circle")
+              .font(.system(size: 42, weight: .light))
+        }
     }
     .padding()
   }

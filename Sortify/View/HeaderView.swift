@@ -22,7 +22,7 @@ struct HeaderView: View {
         Image(systemName: "info.circle")
           .font(.system(size: 24, weight: .regular))
       }
-      .accentColor(Color.primary)
+//      .accentColor(Color.primary)
       .sheet(isPresented: $showInfoView) {
         InfoView()
       }
@@ -45,7 +45,7 @@ struct HeaderView: View {
         Image(systemName: "questionmark.circle")
           .font(.system(size: 24, weight: .regular))
       }
-      .accentColor(Color.primary)
+//      .accentColor(Color.primary)
       .sheet(isPresented: $showGuideView) {
         GuideView()
       }

@@ -8,7 +8,8 @@ import SwiftUI
 struct InfoView: View {
   // MARK: - PROPERTIES
   @Environment(\.presentationMode) var presentationMode
-  
+  let haptics = UINotificationFeedbackGenerator()
+
   var body: some View {
     ScrollView(.vertical, showsIndicators: false) {
       VStack(alignment: .center, spacing: 20) {
@@ -33,6 +34,8 @@ struct InfoView: View {
         Button(action: {
           // ACTION
           // print("A button was tapped.")
+          playSound(sound: "sound-click", type: "mp3")
+          self.haptics.notificationOccurred(.success)
           self.presentationMode.wrappedValue.dismiss()
         }) {
           Text("Continue".uppercased())

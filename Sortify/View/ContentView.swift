@@ -1,6 +1,6 @@
 //  ContentView.swift
 //  Sortify
-//
+
 //  Created by mido mj on 3/15/25.
 
 import SwiftUI 
@@ -147,7 +147,11 @@ struct ContentView: View {
                   return
                 }
                 
-                if drag.translation.width < -self.dragAreaThreshold || drag.translation.width > self.dragAreaThreshold {
+                  if drag.translation.width < -self.dragAreaThreshold {
+                      playSound(sound: "move", type: "mp3")
+                      self.moveCards()
+                  }
+                else if drag.translation.width > self.dragAreaThreshold {
                   playSound(sound: "sound-rise", type: "mp3")
                   self.moveCards()
                 }
